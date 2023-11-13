@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "2bb5a70e-1617-4ed1-b33f-cdf1bd27330a",
+		"name": "Gold Collection API Website Seconhand_SINDIANA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7948841"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": {\r\n    \"name\": \"dianaa\",\r\n    \"email\": \"nana@yahoo.com\",\r\n    \"password\": \"12345678\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": {\r\n    \"email\": \"nana@yahoo.com\",\r\n    \"password\": \"12345678\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users/sign_in.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"sign_in.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/categories.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categories.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/categories/2.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"categories",
+						"2.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Craate Offer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"offer\": {\r\n    \"price\": 49000,\r\n    \"to_id\": 87497,\r\n    \"product_id\": 51576\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/offers.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"offers.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Offers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/users/87499/offers.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"87499",
+						"offers.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Offers",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"offer\": {\r\n    \"status\": \"accepted\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/offers/40913.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"offers",
+						"40913.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product[name]",
+							"value": "Buku",
+							"type": "text"
+						},
+						{
+							"key": "product[price]",
+							"value": "50000",
+							"type": "text"
+						},
+						{
+							"key": "product[description]",
+							"value": "Buku adalah jendela dunia",
+							"type": "text"
+						},
+						{
+							"key": "product[status]",
+							"value": "published",
+							"type": "text"
+						},
+						{
+							"key": "product[category_id]",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "product[images][]",
+							"type": "file",
+							"src": "70rsGl3YI/kid-back-school_24908-59983.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/products.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/51576.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"51576.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Products",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product[name]",
+							"value": "Buku",
+							"type": "text"
+						},
+						{
+							"key": "product[price]",
+							"value": "50000",
+							"type": "text"
+						},
+						{
+							"key": "product[description]",
+							"value": "Buku adalah sumber ilmu",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/products/51576.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"51576.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Products",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/51576.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"51576.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profiles",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user[name]",
+							"value": "sindianaaa",
+							"type": "text"
+						},
+						{
+							"key": "user[phone_number]",
+							"value": "087787657678",
+							"type": "text"
+						},
+						{
+							"key": "user[address]",
+							"value": "Jakarta Selatan",
+							"type": "text"
+						},
+						{
+							"key": "user[city_id]",
+							"value": "12950",
+							"type": "text"
+						},
+						{
+							"key": "user[avatar]",
+							"type": "file",
+							"src": "ZoGkFo_bZ/kid-back-school_24908-59983.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/profiles.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"profiles.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/profiles.json",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"profiles.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

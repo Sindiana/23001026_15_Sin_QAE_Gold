@@ -1,0 +1,15 @@
+{
+	"id": "9b820568-a4d8-47f4-993a-17dbaaae4304",
+	"name": "secondhand_web",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "https://secondhand.binaracademy.org",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2023-11-08T08:07:56.961Z",
+	"_postman_exported_using": "Postman/10.19.17-231106-0450"
+}
